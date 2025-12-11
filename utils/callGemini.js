@@ -45,7 +45,7 @@ export async function callGemini(userText) {
     const text = data?.candidates?.[0]?.content?.parts?.[0]?.text;
     if (!text) {
       console.warn("⚠️ Gemini n'a renvoyé aucun texte.", JSON.stringify(data));
-      return "Désolée, je n'ai pas pu répondre pour le moment.";
+      return "Désolée, je n'ai DDDpas pu répondre pour le moment.";
     }
 
     return text;
@@ -55,3 +55,4 @@ export async function callGemini(userText) {
     return `Oups, Meva a eu un problème technique : ${e.message}`;
   }
 }
+
